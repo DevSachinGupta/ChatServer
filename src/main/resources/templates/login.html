@@ -25,12 +25,12 @@
 <div class="log-w3">
 <div class="w3layouts-main">
 	<h2>Sign In Now</h2>
-		<form action="#" method="post">
-			<div>
-				<p></p>
+		<form th:action="@{/login}" th:object="#{loginForm}" method="post">
+			<div th:if="${param.error}" class="alert alert-danger">
+				<p>Invalid Username and password combination</p>
 			</div>
-			<div>
-				<p></p>
+			<div th:if="${param.logout}" class="alert alert-success">
+				<p>Loggedd out successfully</p>
 			</div>
 			<input type="email" class="ggg" name="Email" placeholder="E-MAIL" required="">
 			<input type="password" class="ggg" name="Password" placeholder="PASSWORD" required="">

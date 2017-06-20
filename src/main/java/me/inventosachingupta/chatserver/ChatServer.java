@@ -31,7 +31,7 @@ public class ChatServer implements Runnable,Constraints{
     private AssistDB db;
     private static Connection con;
 
-    public ChatServer() throws IOException, SQLException, ClassNotFoundException {
+    public ChatServer() throws Exception {
 
         thread=new Thread(this);
         thread.start();
@@ -49,7 +49,7 @@ public class ChatServer implements Runnable,Constraints{
     }
 
     public static void processClientRequest(DataPacket dp) {
-        
+
     }
 
     private static void processMessage(DataPacket dp)
